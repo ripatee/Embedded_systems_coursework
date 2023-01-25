@@ -1,0 +1,3 @@
+## Product specification
+
+Placeholder document
