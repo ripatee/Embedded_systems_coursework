@@ -1,6 +1,8 @@
 (sym_lib_table
   (version 7)
-  (lib (name "nrf9160")(type "KiCad")(uri "${KIPRJMOD}/custom_components/nrf9160.kicad_sym")(options "")(descr ""))
-  (lib (name "TCR2EF33")(type "Legacy")(uri "${KIPRJMOD}/custom_components/TCR2EF33/TCR2EF33.lib")(options "")(descr "Linear regulator"))
-  (lib (name "NRF-9160-SICA-B1A-R")(type "Legacy")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-B1A-R.lib")(options "")(descr "Nordic MCU"))
+  (lib (name "TCR2EF33")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TCR2EF33/TCR2EF33.kicad_sym")(options "")(descr "Linear regulator"))
+  (lib (name "NRF-9160-SICA-B1A-R")(type "KiCad")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-B1A-R.kicad_sym")(options "")(descr "Nordic MCU"))
+  (lib (name "TPD3F303DPVR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TPD3F303DPVR/TPD3F303DPVR.kicad_sym")(options "")(descr "Esd protector"))
+  (lib (name "TMP117MAIDRVT")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TMP117MAIDRVT/TMP117MAIDRVT.kicad_sym")(options "")(descr "Temperature sensor"))
+  (lib (name "HDC2010YPAR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/HDC2010YPAR/HDC2010YPAR.kicad_sym")(options "")(descr "Humidity sensor"))
 )

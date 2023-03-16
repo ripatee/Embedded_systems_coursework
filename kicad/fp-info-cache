@@ -1,4 +1,4 @@
-21449839553114298
+21456555418319557
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -62950,6 +62950,13 @@ Mounting 4.5mm 9774100982
 0
 8
 1
+NRF-9160-SICA-B1A-R
+NRF9160-SICA-B1A-R
+
+
+0
+161
+161
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -83985,6 +83992,27 @@ Logo WEEE
 0
 0
 0
+TCR2EF33
+TCR2EF33
+
+
+0
+5
+5
+TMP117MAIDRVT
+TMP117MAIDRVT
+
+
+0
+6
+6
+TPD3F303DPVR
+TPD3F303DPVR
+
+
+0
+9
+9
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
