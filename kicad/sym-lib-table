@@ -1,4 +1,5 @@
 (sym_lib_table
   (version 7)
   (lib (name "nrf9160")(type "KiCad")(uri "${KIPRJMOD}/custom_components/nrf9160.kicad_sym")(options "")(descr ""))
+  (lib (name "TCR2EF33")(type "Legacy")(uri "${KIPRJMOD}/custom_components/TCR2EF33/TCR2EF33.lib")(options "")(descr "Linear regulator"))
 )
