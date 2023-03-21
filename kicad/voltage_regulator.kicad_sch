@@ -343,7 +343,7 @@
   (symbol (lib_id "Device:C") (at 88.9 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 47442ef4-cd06-4011-9e2d-4744f36c0949)
-    (property "Reference" "C1" (at 92.71 81.915 0)
+    (property "Reference" "C20" (at 92.71 81.915 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 92.71 84.455 0)
@@ -360,7 +360,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/900a775e-83e7-4530-ab2f-7e5f26c05ece"
-          (reference "C1") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
     )
@@ -369,7 +369,7 @@
   (symbol (lib_id "Device:C") (at 165.1 83.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4745dde4-53ba-41d4-9639-5fec5ddc8fc7)
-    (property "Reference" "C2" (at 168.91 83.185 0)
+    (property "Reference" "C21" (at 168.91 83.185 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1.0u" (at 168.91 85.725 0)
@@ -386,7 +386,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/900a775e-83e7-4530-ab2f-7e5f26c05ece"
-          (reference "C2") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )

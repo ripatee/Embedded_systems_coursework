@@ -5,4 +5,6 @@
   (lib (name "TPD3F303DPVR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TPD3F303DPVR/TPD3F303DPVR.kicad_sym")(options "")(descr "Esd protector"))
   (lib (name "TMP117MAIDRVT")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TMP117MAIDRVT/TMP117MAIDRVT.kicad_sym")(options "")(descr "Temperature sensor"))
   (lib (name "HDC2010YPAR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/HDC2010YPAR/HDC2010YPAR.kicad_sym")(options "")(descr "Humidity sensor"))
+  (lib (name "693043020611")(type "KiCad")(uri "${KIPRJMOD}/custom_components/693043020611/693043020611.kicad_sym")(options "")(descr "Simcard holder"))
+  (lib (name "NRF9160-SICA-R")(type "KiCad")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-R.kicad_sym")(options "")(descr ""))
 )
