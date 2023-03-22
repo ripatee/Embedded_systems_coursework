@@ -7,4 +7,6 @@
   (lib (name "HDC2010YPAR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/HDC2010YPAR/HDC2010YPAR.kicad_sym")(options "")(descr "Humidity sensor"))
   (lib (name "693043020611")(type "KiCad")(uri "${KIPRJMOD}/custom_components/693043020611/693043020611.kicad_sym")(options "")(descr "Simcard holder"))
   (lib (name "NRF9160-SICA-R")(type "KiCad")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-R.kicad_sym")(options "")(descr ""))
+  (lib (name "MIC5219-3.3YM5-TR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.kicad_sym")(options "")(descr "Linear regulator (500mA lähtövirta ja 12V Vin"))
+  (lib (name "SHT40-AD1B-R2")(type "KiCad")(uri "${KIPRJMOD}/custom_components/SHT40-AD1B-R2/SHT40-AD1B-R2.kicad_sym")(options "")(descr "Humidity sensor"))
 )
