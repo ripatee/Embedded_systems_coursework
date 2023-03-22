@@ -6,5 +6,7 @@
   (lib (name "TMP117MAIDRVT")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TMP117MAIDRVT/TMP117MAIDRVT.kicad_sym")(options "")(descr "Temperature sensor"))
   (lib (name "HDC2010YPAR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/HDC2010YPAR/HDC2010YPAR.kicad_sym")(options "")(descr "Humidity sensor"))
   (lib (name "693043020611")(type "KiCad")(uri "${KIPRJMOD}/custom_components/693043020611/693043020611.kicad_sym")(options "")(descr "Simcard holder"))
-  (lib (name "NRF9160-SICA-R")(type "KiCad")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-R.kicad_sym")(options "")(descr ""))
+  (lib (name "NRF9160-SICA-R")(type "KiCad")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-R.kicad_sym")(options "")(descr "")(disabled)(hidden))
+  (lib (name "694106106102")(type "KiCad")(uri "${KIPRJMOD}/custom_components/694106106102/694106106102.kicad_sym")(options "")(descr "Power jack"))
+  (lib (name "USB4110-GF-A")(type "KiCad")(uri "${KIPRJMOD}/custom_components/USB4110-GF-A/USB4110-GF-A.kicad_sym")(options "")(descr "USB-C connector"))
 )
