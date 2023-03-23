@@ -4,6 +4,10 @@
 
   (paper "A4")
 
+  (title_block
+    (company "University of Oulu")
+  )
+
   (lib_symbols
     (symbol "694106106102:694106106102" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 10.16 7.62 0)

@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "SIM module")
+    (date "2023-03-21")
+    (company "University of Oulu")
+    (comment 1 "SIM card holder and ESD protector")
+  )
+
   (lib_symbols
     (symbol "693043020611:693043020611" (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J1" (at -8.89 6.35 0)

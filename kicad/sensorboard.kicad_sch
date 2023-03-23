@@ -4,6 +4,10 @@
 
   (paper "A4")
 
+  (title_block
+    (company "University of Oulu")
+  )
+
   (lib_symbols
     (symbol "SHT40-AD1B-R2:SHT40-AD1B-R2" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 20.32 10.16 0)
