@@ -9,4 +9,6 @@
   (lib (name "NRF9160-SICA-R")(type "KiCad")(uri "${KIPRJMOD}/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-R.kicad_sym")(options "")(descr "")(disabled)(hidden))
   (lib (name "694106106102")(type "KiCad")(uri "${KIPRJMOD}/custom_components/694106106102/694106106102.kicad_sym")(options "")(descr "Power jack"))
   (lib (name "USB4110-GF-A")(type "KiCad")(uri "${KIPRJMOD}/custom_components/USB4110-GF-A/USB4110-GF-A.kicad_sym")(options "")(descr "USB-C connector"))
+  (lib (name "MIC5219-3.3YM5-TR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.kicad_sym")(options "")(descr "Linear regulator (500mA lähtövirta ja 12V Vin"))
+  (lib (name "SHT40-AD1B-R2")(type "KiCad")(uri "${KIPRJMOD}/custom_components/SHT40-AD1B-R2/SHT40-AD1B-R2.kicad_sym")(options "")(descr "Humidity sensor"))
 )

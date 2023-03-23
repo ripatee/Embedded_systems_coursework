@@ -7,4 +7,6 @@
   (lib (name "HDC2010YPAR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/HDC2010YPAR/HDC2010YPAR.pretty")(options "")(descr ""))
   (lib (name "693043020611")(type "KiCad")(uri "${KIPRJMOD}/custom_components/693043020611/693043020611.pretty")(options "")(descr "sim card holder"))
   (lib (name "694106106102")(type "KiCad")(uri "${KIPRJMOD}/custom_components/694106106102/694106106102.pretty")(options "")(descr "power jack"))
+  (lib (name "SHT-40AD1B-R2")(type "KiCad")(uri "${KIPRJMOD}/custom_components/SHT40-AD1B-R2/SHT40-AD1B-R2.pretty")(options "")(descr ""))
+  (lib (name "MIC5219-3.3YM5-TR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.pretty")(options "")(descr ""))
 )
