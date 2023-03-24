@@ -11,4 +11,5 @@
   (lib (name "USB4110-GF-A")(type "KiCad")(uri "${KIPRJMOD}/custom_components/USB4110-GF-A/USB4110-GF-A.kicad_sym")(options "")(descr "USB-C connector"))
   (lib (name "MIC5219-3.3YM5-TR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.kicad_sym")(options "")(descr "Linear regulator (500mA lähtövirta ja 12V Vin"))
   (lib (name "SHT40-AD1B-R2")(type "KiCad")(uri "${KIPRJMOD}/custom_components/SHT40-AD1B-R2/SHT40-AD1B-R2.kicad_sym")(options "")(descr "Humidity sensor"))
+  (lib (name "TPD2E2U06DCKR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TPD2E2U06DCKR/TPD2E2U06DCKR.kicad_sym")(options "")(descr "ESD potection fo USB 2.0"))
 )
