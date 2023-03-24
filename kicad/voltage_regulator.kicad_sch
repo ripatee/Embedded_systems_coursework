@@ -612,6 +612,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 16a7503b-190e-4eab-b7e1-5b5e59e5e39e)
   )
+  (text "Power jacks three pin configuration allows \npower source selection between USB and battery pack.\nWhen power jack is unconnected, USB power circuit is closed and \npower comes from possible USB host. If power jack is connected,\nUSB power circuit is open and power comes from battery pack."
+    (at 54.61 49.53 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 3e200834-2266-4aba-a217-276f1d582051)
+  )
 
   (global_label "USB_GND" (shape input) (at 102.87 59.69 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
@@ -631,7 +636,7 @@
   (symbol (lib_id "Device:C") (at 161.29 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2c7f108e-21cf-4600-b84d-8f2f7c707127)
-    (property "Reference" "C11" (at 165.1 86.995 0)
+    (property "Reference" "C22" (at 165.1 86.995 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "470p" (at 165.1 89.535 0)
@@ -648,7 +653,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/900a775e-83e7-4530-ab2f-7e5f26c05ece"
-          (reference "C11") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -759,7 +764,7 @@
   (symbol (lib_id "MIC5219-3.3YM5-TR:MIC5219-3.3YM5-TR") (at 101.6 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5b8aa0ca-3f8e-4a04-80c6-b2da496f5011)
-    (property "Reference" "U4" (at 129.54 69.85 0)
+    (property "Reference" "U20" (at 129.54 69.85 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "MIC5219-3.3YM5-TR" (at 129.54 72.39 0)
@@ -779,7 +784,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/900a775e-83e7-4530-ab2f-7e5f26c05ece"
-          (reference "U4") (unit 1)
+          (reference "U20") (unit 1)
         )
       )
     )
@@ -788,7 +793,7 @@
   (symbol (lib_id "694106106102:694106106102") (at 77.47 68.58 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid df938770-5e5a-4a9b-a73a-8d2e349e3f13)
-    (property "Reference" "J2" (at 59.69 63.5 0)
+    (property "Reference" "J20" (at 59.69 63.5 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "694106106102" (at 59.69 66.04 0)
@@ -807,7 +812,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/900a775e-83e7-4530-ab2f-7e5f26c05ece"
-          (reference "J2") (unit 1)
+          (reference "J20") (unit 1)
         )
       )
     )

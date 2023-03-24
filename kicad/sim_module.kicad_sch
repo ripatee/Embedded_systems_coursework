@@ -474,10 +474,10 @@
   (symbol (lib_id "693043020611:693043020611") (at 90.17 82.55 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0d265db7-d304-45d6-8a99-47f01d6009a6)
-    (property "Reference" "J1" (at 99.06 76.2 0)
+    (property "Reference" "J40" (at 83.82 74.93 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Value" "693043020611" (at 99.06 78.74 0)
+    (property "Value" "693043020611" (at 85.09 77.47 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Footprint" "CONN6_43020611_WRE" (at 80.01 75.946 0)
@@ -495,7 +495,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/38627e9e-7096-4a1a-bc9e-0f2735fcbe8c"
-          (reference "J1") (unit 1)
+          (reference "J40") (unit 1)
         )
       )
     )
@@ -504,10 +504,10 @@
   (symbol (lib_id "TPD3F303DPVR:TPD3F303DPVR") (at 111.76 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5bd3e525-d1eb-4c90-b08b-eb3da8f6e550)
-    (property "Reference" "U1" (at 128.27 77.47 0)
+    (property "Reference" "U40" (at 124.46 77.47 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Value" "TPD3F303DPVR" (at 151.13 85.09 0)
+    (property "Value" "TPD3F303DPVR" (at 151.13 77.47 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Footprint" "DPV8_1P7X0P4" (at 71.12 91.186 0)
@@ -528,7 +528,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/38627e9e-7096-4a1a-bc9e-0f2735fcbe8c"
-          (reference "U1") (unit 1)
+          (reference "U40") (unit 1)
         )
       )
     )

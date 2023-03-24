@@ -523,6 +523,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 996c7a18-e267-438b-b7d9-a712a20c5446)
   )
+  (text "ESD protector is needed to protect\nMCU from ESD shock."
+    (at 91.44 93.98 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid a063b176-3589-4fde-b683-4eb398119c7b)
+  )
   (text "USB_VBUS is connected to voltage regulator via power jack.\nIf power jack is unconnected, the circuit is closed and \nsystem power comes from USB_VBUS. IF power jack is \nconnected, VBUS circuit is closed and power comes from\nbattery pack."
     (at 40.64 33.02 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -586,7 +591,7 @@
   (symbol (lib_id "Connector:USB_C_Receptacle_USB2.0") (at 64.77 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 130bc2d0-ee5b-4dfd-8105-861d96854970)
-    (property "Reference" "J3" (at 64.77 36.83 0)
+    (property "Reference" "J50" (at 64.77 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "USB_C_Receptacle_USB2.0" (at 64.77 39.37 0)
@@ -618,7 +623,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/a70bd09f-d983-47ca-8017-0524420ada83"
-          (reference "J3") (unit 1)
+          (reference "J50") (unit 1)
         )
       )
     )
@@ -652,7 +657,7 @@
   (symbol (lib_id "Device:R") (at 139.7 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3244b515-d58d-4013-9e3f-418e2ef22baa)
-    (property "Reference" "R3" (at 140.97 52.07 0)
+    (property "Reference" "R51" (at 140.97 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 140.97 54.61 0)
@@ -669,7 +674,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/a70bd09f-d983-47ca-8017-0524420ada83"
-          (reference "R3") (unit 1)
+          (reference "R51") (unit 1)
         )
       )
     )
@@ -678,7 +683,7 @@
   (symbol (lib_id "TPD2E2U06DCKR:TPD2E2U06DCKR") (at 95.25 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 543d70e5-202f-41b7-b2ad-b1edeec14470)
-    (property "Reference" "U6" (at 110.49 68.58 0)
+    (property "Reference" "U50" (at 110.49 68.58 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "TPD2E2U06DCKR" (at 110.49 71.12 0)
@@ -696,7 +701,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/a70bd09f-d983-47ca-8017-0524420ada83"
-          (reference "U6") (unit 1)
+          (reference "U50") (unit 1)
         )
       )
     )
@@ -755,7 +760,7 @@
   (symbol (lib_id "Device:R") (at 132.08 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dab517b5-fe20-4f57-a207-5a54d2a16a1e)
-    (property "Reference" "R4" (at 133.35 54.61 0)
+    (property "Reference" "R50" (at 133.35 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 133.35 57.15 0)
@@ -772,7 +777,7 @@
     (instances
       (project "IoT_sulari"
         (path "/184b47ed-2c2b-4c02-be35-d18f4f4e5685/a70bd09f-d983-47ca-8017-0524420ada83"
-          (reference "R4") (unit 1)
+          (reference "R50") (unit 1)
         )
       )
     )
