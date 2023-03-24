@@ -2264,6 +2264,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 50875dca-de4b-4a2b-8428-d8ac5fe3452e)
   )
+  (text "Typical forward voltages\nRed: 1.6-2.0V\nGreen: 1.9-4.0V\nBoth CRLs chosen with\nforward voltage of 2.0V"
+    (at 236.22 157.48 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid dabaab05-ac60-4698-99dc-5d1cc634d3c8)
+  )
 
   (global_label "SIM_CLK" (shape input) (at 222.25 78.74 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
