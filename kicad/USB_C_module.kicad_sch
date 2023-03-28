@@ -9,6 +9,7 @@
     (date "2023-03-23")
     (company "University of Oulu")
     (comment 1 "USB-C 2.0 receptacle. Connect to other modules via global pins")
+    (comment 2 "THIS WILL NOT BE USED")
   )
 
   (lib_symbols
