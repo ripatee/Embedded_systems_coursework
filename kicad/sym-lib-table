@@ -13,4 +13,6 @@
   (lib (name "SHT40-AD1B-R2")(type "KiCad")(uri "${KIPRJMOD}/custom_components/SHT40-AD1B-R2/SHT40-AD1B-R2.kicad_sym")(options "")(descr "Humidity sensor"))
   (lib (name "TPD2E2U06DCKR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TPD2E2U06DCKR/TPD2E2U06DCKR.kicad_sym")(options "")(descr "ESD potection fo USB 2.0"))
   (lib (name "73412-0110")(type "KiCad")(uri "${KIPRJMOD}/custom_components/73412-0110/73412-0110.kicad_sym")(options "")(descr "U.FL antenna connector"))
+  (lib (name "TL3301DF160QG")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TL3301DF160QG/TL3301DF160QG.kicad_sym")(options "")(descr "Button"))
+  (lib (name "20021121-00010C4LF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/20021121-00010C4LF/20021121-00010C4LF.kicad_sym")(options "")(descr "10-pin connector"))
 )

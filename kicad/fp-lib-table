@@ -11,4 +11,6 @@
   (lib (name "MIC5219-3.3YM5-TR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.pretty")(options "")(descr ""))
   (lib (name "TPD2E2U06DCKR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TPD2E2U06DCKR/TPD2E2U06DCKR.pretty")(options "")(descr "ESD protection for USB 2.0"))
   (lib (name "73412-0110")(type "KiCad")(uri "${KIPRJMOD}/custom_components/73412-0110/73412-0110.pretty")(options "")(descr "U.FL antenna connector"))
+  (lib (name "TL3301DF160QG")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TL3301DF160QG/TL3301DF160QG.pretty")(options "")(descr "Button"))
+  (lib (name "20021121-00010C4LF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/20021121-00010C4LF/20021121-00010C4LF.pretty")(options "")(descr "10-pin connector"))
 )
