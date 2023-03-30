@@ -15,4 +15,5 @@
   (lib (name "73412-0110")(type "KiCad")(uri "${KIPRJMOD}/custom_components/73412-0110/73412-0110.kicad_sym")(options "")(descr "U.FL antenna connector"))
   (lib (name "TL3301DF160QG")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TL3301DF160QG/TL3301DF160QG.kicad_sym")(options "")(descr "Button"))
   (lib (name "20021121-00010C4LF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/20021121-00010C4LF/20021121-00010C4LF.kicad_sym")(options "")(descr "10-pin connector"))
+  (lib (name "G800MJ302018EU")(type "KiCad")(uri "${KIPRJMOD}/custom_components/G800MJ302018EU.kicad_sym")(options "")(descr ""))
 )
