@@ -596,11 +596,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 16a7503b-190e-4eab-b7e1-5b5e59e5e39e)
   )
-  (text "Power jacks three pin configuration allows \npower source selection between USB and battery pack.\nWhen power jack is unconnected, USB power circuit is closed and \npower comes from possible USB host. If power jack is connected,\nUSB power circuit is open and power comes from battery pack."
-    (at 35.56 38.1 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 3e200834-2266-4aba-a217-276f1d582051)
-  )
 
   (symbol (lib_id "Device:C") (at 142.24 76.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
