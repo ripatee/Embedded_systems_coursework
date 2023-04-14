@@ -490,10 +490,6 @@
       "voltage_regulator"
     ],
     [
-      "ce4dfdb9-1dc9-45f7-82b8-487b1ef6453b",
-      "sensorboard"
-    ],
-    [
       "38627e9e-7096-4a1a-bc9e-0f2735fcbe8c",
       "sim_module"
     ]
