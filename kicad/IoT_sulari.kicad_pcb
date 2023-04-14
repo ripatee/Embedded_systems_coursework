@@ -225,7 +225,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tstamp 028a4db2-2083-4b34-8ed5-e65e6e776700)
-    (at 123.5 57.749589 -90)
+    (at 123.5 57.5 -90)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digikey" "RNCP0603FTD1K00CT-ND")
@@ -1492,7 +1492,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tstamp 5e00b0bd-e505-4075-b5dc-59d2e86617ce)
-    (at 126.25 57.75 -90)
+    (at 126.25 57.500411 -90)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digikey" "587-1245-1-ND")
@@ -1547,7 +1547,7 @@
 
   (footprint "TL3302BF180QG:TL3302BF180QG" (layer "F.Cu")
     (tstamp 83399f29-6d29-4d4f-be8e-cddc264be520)
-    (at 120.75 66 90)
+    (at 120.75 62.345 90)
     (property "Sheetfile" "IoT_sulari.kicad_sch")
     (property "Sheetname" "")
     (property "ki_description" "Single Pole Single Throw (SPST) switch")
