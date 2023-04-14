@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SHT40-AD1B-R3")(type "KiCad")(uri "C:/Users/T430/Embedded_systems_coursework/kicad/custom_components/SHT40-AD1B-R2/SHT40-AD1B-R2.pretty")(options "")(descr "Humidity sensor"))
+  (lib (name "TMP117MAIDRVT")(type "KiCad")(uri "C:/Users/T430/Embedded_systems_coursework/kicad/custom_components/TMP117MAIDRVT/TMP117MAIDRVT.pretty")(options "")(descr "Temperature sensor"))
+  (lib (name "20021121-00010C4LF")(type "KiCad")(uri "C:/Users/T430/Embedded_systems_coursework/kicad/custom_components/20021121-00010C4LF/20021121-00010C4LF.pretty")(options "")(descr ""))
+)
