@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\T430\Embedded_systems_coursework\kicad\IoT_sulari.kicad_sch</source>
-    <date>4/19/2023 11:49:49 AM</date>
+    <source>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad\IoT_sulari.kicad_sch</source>
+    <date>4/19/2023 11:39:52 AM</date>
+>>>>>>> 7673e612531a495271a8e5215529c335fc98237d
     <tool>Eeschema (7.0.0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1095,37 +1096,41 @@
   </libparts>
   <libraries>
     <library logical="20021121-00010C4LF">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/20021121-00010C4LF/20021121-00010C4LF.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/20021121-00010C4LF/20021121-00010C4LF.kicad_sym</uri>
     </library>
     <library logical="693043020611">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/693043020611/693043020611.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/693043020611/693043020611.kicad_sym</uri>
     </library>
     <library logical="694106106102">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/694106106102/694106106102.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/694106106102/694106106102.kicad_sym</uri>
     </library>
     <library logical="73412-0110">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/73412-0110/73412-0110.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/73412-0110/73412-0110.kicad_sym</uri>
+>>>>>>> 7673e612531a495271a8e5215529c335fc98237d
     </library>
     <library logical="Device">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
     </library>
     <library logical="G800MJ302018EU">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/G800MJ302018EU.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/G800MJ302018EU.kicad_sym</uri>
     </library>
     <library logical="MIC5219-3.3YM5-TR">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/MIC5219-3.3YM5-TR/MIC5219-3.3YM5-TR.kicad_sym</uri>
+>>>>>>> 7673e612531a495271a8e5215529c335fc98237d
     </library>
     <library logical="Mechanical">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
     </library>
     <library logical="NRF-9160-SICA-B1A-R">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-B1A-R.kicad_sym</uri>
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/NRF-9160-SICA-B1A-R/NRF9160-SICA-B1A-R.kicad_sym</uri>
+>>>>>>> 7673e612531a495271a8e5215529c335fc98237d
     </library>
     <library logical="Switch">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
     </library>
-    <library logical="TPD3F303DPVR">
-      <uri>C:\Users\T430\Embedded_systems_coursework\kicad/custom_components/TPD3F303DPVR/TPD3F303DPVR.kicad_sym</uri>
+    <library logical="TPD3F303DPVR">s
+      <uri>C:\Users\joaki\Documents\Kouluhommat\sulari\kicad/custom_components/TPD3F303DPVR/TPD3F303DPVR.kicad_sym</uri>
+>>>>>>> 7673e612531a495271a8e5215529c335fc98237d
     </library>
   </libraries>
   <nets>
