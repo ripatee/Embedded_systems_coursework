@@ -15,4 +15,5 @@
   (lib (name "20021121-00010C4LF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/20021121-00010C4LF/20021121-00010C4LF.pretty")(options "")(descr "10-pin connector"))
   (lib (name "G800MJ302018EU")(type "KiCad")(uri "${KIPRJMOD}/custom_components/G800MJ302018EU/G800MJ302018EU.pretty")(options "")(descr ""))
   (lib (name "TL3302BF180QG")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TL3302BF180QG.pretty")(options "")(descr ""))
+  (lib (name "10129380-908001ALF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/10129380-908001ALF.pretty")(options "")(descr ""))
 )
