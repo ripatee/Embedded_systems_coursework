@@ -17,5 +17,4 @@
   (lib (name "20021121-00010C4LF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/20021121-00010C4LF/20021121-00010C4LF.kicad_sym")(options "")(descr "10-pin connector"))
   (lib (name "G800MJ302018EU")(type "KiCad")(uri "${KIPRJMOD}/custom_components/G800MJ302018EU.kicad_sym")(options "")(descr ""))
   (lib (name "10129380-908001ALF")(type "KiCad")(uri "${KIPRJMOD}/custom_components/10129380-908001ALF.kicad_sym")(options "")(descr ""))
-  (lib (name "TPD3F303DQDR")(type "KiCad")(uri "${KIPRJMOD}/custom_components/TPD3F303DQDR/TPD3F303DQDR.kicad_sym")(options "")(descr "ESD protection (smaller package)"))
 )
