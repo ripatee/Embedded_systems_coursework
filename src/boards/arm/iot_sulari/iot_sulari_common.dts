@@ -71,19 +71,38 @@
 	pinctrl-names = "default", "sleep";
 };
 
-arduino_i2c: &i2c2 {
+&i2c2 {
 	compatible = "nordic,nrf-twim";
 	status = "okay";
 	pinctrl-0 = <&i2c2_default>;
 	pinctrl-1 = <&i2c2_sleep>;
 	pinctrl-names = "default", "sleep";
+
+	ti_tmp116: ti_tmp116@49 {
+		compatible = "ti,tmp116";
+		reg = <0x49>;
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		eeprom: ti_tmp116_eeprom@0{
+			compatible = "ti,tmp116-eeprom";
+			reg = <0x0>;
+			read-only;
+		};
+	};
+
+	sht4x@44 {
+		status= "okay";
+		compatible = "sensirion,sht4x";
+		reg = <0x44>;
+		repeatability = <2>;
+	};
 };
 
-/*&uart1 {
+&uart1 {
 	status = "disabled";
 	current-speed = <115200>;
 	pinctrl-0 = <&uart1_default>;
 	pinctrl-1 = <&uart1_sleep>;
 	pinctrl-names = "default", "sleep";
-}; */
-
+};
