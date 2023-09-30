@@ -3,10 +3,13 @@
 
 #include "sensors.h"
 #include "buttons.h"
+#include "lte.h"
 
 #define SLEEP_TIME_MS	10000
 
 LOG_MODULE_REGISTER(MAIN, LOG_LEVEL_DBG);
+
+extern struct k_sem lte_connected;
 
 int main(void)
 {
@@ -17,6 +20,17 @@ int main(void)
 
 	sensors_init();
 	buttons_init();
+
+	if (lte_modem_configure())
+	{
+		LOG_ERR("Failed to configure modem");
+	}
+
+	LOG_INF("Connecting to LTE network");
+
+	k_sem_take(&lte_connected, K_FOREVER);
+
+	LOG_INF("Connected to LTE network");
 
 	/* Main loop*/
 	while(true)
