@@ -1,3 +1,6 @@
+#include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/sensor/tmp116.h>
+#include <zephyr/drivers/sensor/sht4x.h>
 #include <zephyr/device.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/sys/__assert.h>

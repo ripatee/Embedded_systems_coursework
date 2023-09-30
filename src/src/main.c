@@ -2,8 +2,9 @@
 #include <zephyr/logging/log.h>
 
 #include "sensors.h"
+#include "buttons.h"
 
-#define SLEEP_TIME_MS	1000
+#define SLEEP_TIME_MS	10000
 
 LOG_MODULE_REGISTER(MAIN, LOG_LEVEL_DBG);
 
@@ -15,6 +16,7 @@ int main(void)
 	LOG_INF("Application starting");
 
 	sensors_init();
+	buttons_init();
 
 	/* Main loop*/
 	while(true)
@@ -22,7 +24,7 @@ int main(void)
 		temp = get_temperature();
 		humidity = get_humidity();
 
-		LOG_INF("Temp: %.2fC, Humidity: %.2f%%", temp, humidity);
+		LOG_DBG("Temp: %.2fC, Humidity: %.2f%%", temp, humidity);
 
 	k_msleep(SLEEP_TIME_MS);
 	}
