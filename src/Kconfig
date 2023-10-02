@@ -42,4 +42,7 @@ config MQTT_RECONNECT_DELAY_S
     int "Seconds to delay before attempting to reconnect to the broker."
     default 60
 
+config SMS_RECEIVER_NUMBER
+    string "Phone number in international format where the SMS message is sent"
+    default ""
 endmenu

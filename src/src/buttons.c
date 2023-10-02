@@ -4,6 +4,8 @@
 #include <zephyr/logging/log.h>
 
 #include "buttons.h"
+#include "sms_wrapper.h"
+#include "sensors.h"
 
 #define SW0_NODE    DT_ALIAS(sw0)
 #define SW1_NODE    DT_ALIAS(sw1)
