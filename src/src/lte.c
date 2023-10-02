@@ -47,11 +47,16 @@ int lte_modem_configure(void)
 		return err;
 	}
 
+    LOG_INF("Connecting to LTE network");
+
 	err = lte_lc_init_and_connect_async(lte_handler);
 	if (err) {
 		LOG_ERR("Modem could not be configured, error: %d", err);
 		return err;
 	}
+
+    k_sem_take(&lte_connected, K_FOREVER);
+    LOG_INF("Connected to LTE network");
 
 	return 0;
 }
