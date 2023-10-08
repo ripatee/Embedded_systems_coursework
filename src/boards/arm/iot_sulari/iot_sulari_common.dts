@@ -106,3 +106,20 @@
 	pinctrl-1 = <&uart1_sleep>;
 	pinctrl-names = "default", "sleep";
 };
+
+&spi3 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	pinctrl-0 = <&spi3_default>;
+	pinctrl-1 = <&spi3_sleep>;
+	pinctrl-names = "default", "sleep";
+	cs-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+	waveshare_epd_2in9_v2@0{
+		compatible = "waveshare,epd2in9v2";
+		reg = <0x0>;
+		rst-gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		busy-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		dc-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+};
