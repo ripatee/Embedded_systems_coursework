@@ -5,6 +5,7 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/net/socket.h>
 #include <zephyr/net/mqtt.h>
+#include <lvgl.h>
 
 #include "sensors.h"
 #include "buttons.h"
@@ -26,6 +27,14 @@ int main(void)
     uint32_t connect_attempt = 0;
     char mqtt_msg[256];
     int alert_sent = 0;
+
+    const struct device *display_dev;
+
+    display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
+    if (!device_is_ready(display_dev))
+    {
+        LOG_ERR("Display not ready");
+    }
 
 
     LOG_INF("Application starting");
