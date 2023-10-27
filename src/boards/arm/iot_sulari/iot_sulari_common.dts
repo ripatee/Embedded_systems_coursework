@@ -4,128 +4,155 @@
  #include "iot_sulari_common-pinctrl.dtsi"
 
 / {
-	model = "IoT-sulari";
-	compatible = "vjr-oy,iot-sulari";
+    model = "IoT-sulari";
+    compatible = "vjr-oy,iot-sulari";
 
-	chosen {
-		zephyr,console = &uart0;
-		zephyr,shell-uart = &uart0;
-		zephyr,uart-mcumgr = &uart0;
-		zerphyr,display = &ssd16xx;
-	};
+    chosen {
+        zephyr,console = &uart0;
+        zephyr,shell-uart = &uart0;
+        zephyr,uart-mcumgr = &uart0;
+        zephyr,display = &epaper;
+    };
 
-	leds {
-		compatible = "gpio-leds";
-		led0: led_0 {
-			gpios = <&gpio0 5 0>;
-			label = "Red LED 1";
-		};
-		led1: led_1 {
-			gpios = <&gpio0 6 0>;
-			label = "Green LED 2";
-		};
-	};
+    leds {
+        compatible = "gpio-leds";
+        led0: led_0 {
+            gpios = <&gpio0 5 0>;
+            label = "Red LED 1";
+        };
+        led1: led_1 {
+            gpios = <&gpio0 6 0>;
+            label = "Green LED 2";
+        };
+    };
 
-	buttons {
-		compatible = "gpio-keys";
-		button0: button_0 {
-			gpios = <&gpio0 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "Push button 1";
-		};
-		button1: button_1 {
-			gpios = <&gpio0 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "Push button 2";
-		};
-		button2: button_2 {
-			gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "Push button 3";
-		};
-		button3: button_3 {
-			gpios = <&gpio0 3 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "Push button 4";
-		};
-	};
+    buttons {
+        compatible = "gpio-keys";
+        button0: button_0 {
+            gpios = <&gpio0 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button 1";
+        };
+        button1: button_1 {
+            gpios = <&gpio0 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button 2";
+        };
+        button2: button_2 {
+            gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button 3";
+        };
+        button3: button_3 {
+            gpios = <&gpio0 3 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button 4";
+        };
+    };
 
-	/* These aliases are provided for compatibility with samples */
-	aliases {
-		led0 = &led0;
-		led1 = &led1;
-		sw0 = &button0;
-		sw1 = &button1;
-		sw2 = &button2;
-		sw3 = &button3;
-		bootloader-led0 = &led0;
-		mcuboot-button0 = &button0;
-		mcuboot-led0 = &led0;
-	};
+    /* These aliases are provided for compatibility with samples */
+    aliases {
+        led0 = &led0;
+        led1 = &led1;
+        sw0 = &button0;
+        sw1 = &button1;
+        sw2 = &button2;
+        sw3 = &button3;
+        bootloader-led0 = &led0;
+        mcuboot-button0 = &button0;
+        mcuboot-led0 = &led0;
+    };
 };
 
 &gpio0 {
-	status = "okay";
+    status = "okay";
 };
 
 &uart0 {
-	status = "okay";
-	current-speed = <115200>;
-	pinctrl-0 = <&uart0_default>;
-	pinctrl-1 = <&uart0_sleep>;
-	pinctrl-names = "default", "sleep";
+    status = "okay";
+    current-speed = <115200>;
+    pinctrl-0 = <&uart0_default>;
+    pinctrl-1 = <&uart0_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 &i2c2 {
-	compatible = "nordic,nrf-twim";
-	status = "okay";
-	pinctrl-0 = <&i2c2_default>;
-	pinctrl-1 = <&i2c2_sleep>;
-	pinctrl-names = "default", "sleep";
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    pinctrl-0 = <&i2c2_default>;
+    pinctrl-1 = <&i2c2_sleep>;
+    pinctrl-names = "default", "sleep";
 
-	ti_tmp116: ti_tmp116@49 {
-		compatible = "ti,tmp116";
-		reg = <0x49>;
-		#address-cells = <1>;
-		#size-cells = <0>;
+    ti_tmp116: ti_tmp116@49 {
+        compatible = "ti,tmp116";
+        reg = <0x49>;
+        #address-cells = <1>;
+        #size-cells = <0>;
 
-		eeprom: ti_tmp116_eeprom@0{
-			compatible = "ti,tmp116-eeprom";
-			reg = <0x0>;
-			read-only;
-		};
-	};
+        eeprom: ti_tmp116_eeprom@0{
+            compatible = "ti,tmp116-eeprom";
+            reg = <0x0>;
+            read-only;
+        };
+    };
 
-	sht4x@44 {
-		status= "okay";
-		compatible = "sensirion,sht4x";
-		reg = <0x44>;
-		repeatability = <2>;
-	};
+    sht4x@44 {
+        status= "okay";
+        compatible = "sensirion,sht4x";
+        reg = <0x44>;
+        repeatability = <2>;
+    };
 };
 
 &uart1 {
-	status = "disabled";
-	current-speed = <115200>;
-	pinctrl-0 = <&uart1_default>;
-	pinctrl-1 = <&uart1_sleep>;
-	pinctrl-names = "default", "sleep";
+    status = "disabled";
+    current-speed = <115200>;
+    pinctrl-0 = <&uart1_default>;
+    pinctrl-1 = <&uart1_sleep>;
+    pinctrl-names = "default", "sleep";
 };
 
 &spi3 {
-	compatible = "nordic,nrf-spim";
-	status = "okay";
-	pinctrl-0 = <&spi3_default>;
-	pinctrl-1 = <&spi3_sleep>;
-	pinctrl-names = "default", "sleep";
-	cs-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-1 = <&spi3_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-	ssd16xx: ssd16xxfb@0{
-		compatible = "solomon,ssd16xxfb";
-		reg = <0>;
-		width = <296>;
-		height = <128>;
-		reset-gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		busy-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		dc-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		pp-width-bits = < 8 >;
-		pp-height-bits = < 16 >;
-		spi-max-frequency = < 4000000 >;
-	};
+    epaper: ssd16xxfb@0{
+        compatible = "gooddisplay,gdeh029a1", "solomon,ssd1680", "solomon,ssd16xxfb";
+        spi-max-frequency = < 4000000 >;
+        status = "okay";
+        reg = <0>;
+        width = <296>;
+        height = <128>;
+        pp-width-bits = < 8 >;
+        pp-height-bits = < 16 >;
+        reset-gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        busy-gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        dc-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+		full {
+			vcom = <0x9a>;
+			border-waveform = <0x33>;
+			dummy-line = <0x1a>;
+			gate-line-width = <0x08>;
+			lut = [
+				50 AA 55 AA 11 00 00 00
+				00 00 00 00 00 00 00 00
+				00 00 00 00 FF FF 1F 00
+				00 00 00 00 00 00
+			];
+		};
+
+		partial {
+			vcom = <0xa8>;
+			border-waveform = <0x01>;
+			dummy-line = <0x1a>;
+			gate-line-width = <0x08>;
+			lut = [
+				10 18 18 08 18 18 08 00
+				00 00 00 00 00 00 00 00
+				00 00 00 00 13 14 44 12
+				00 00 00 00 00 00
+			];
+		};
+    };              
 };
