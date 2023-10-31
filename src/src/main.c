@@ -57,12 +57,23 @@ int main(void)
         LOG_ERR("Initializing SMS failed");
     }
 
-/*    hello_world_label = lv_label_create(lv_scr_act());
+
+    hello_world_label = lv_label_create(lv_scr_act());
     lv_label_set_text(hello_world_label, "Hello world!");
     lv_obj_align(hello_world_label, LV_ALIGN_CENTER, 0, 0);
 
     lv_task_handler();
-    display_blanking_off(display_dev); */
+    display_blanking_off(display_dev); 
+
+    LOG_INF("First write");
+    k_msleep(5000);
+    LOG_INF("Second write");
+
+    lv_label_set_text(hello_world_label, "Testing");
+    lv_obj_align(hello_world_label, LV_ALIGN_CENTER, 0, 0);
+
+    lv_task_handler();
+
 
     if (mqtt_client_init_wrapper(&mqtt_client))
     {
