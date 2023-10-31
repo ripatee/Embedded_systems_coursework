@@ -9,8 +9,3 @@ zephyr_include_directories(include)
 add_subdirectory(drivers)
 
 target_sources(app PRIVATE src/main.c)
-target_sources(app PRIVATE src/sensors.c)
-target_sources(app PRIVATE src/buttons.c)
-target_sources(app PRIVATE src/lte.c)
-target_sources(app PRIVATE src/mqtt_connection.c)
-target_sources(app PRIVATE src/sms_wrapper.c)
