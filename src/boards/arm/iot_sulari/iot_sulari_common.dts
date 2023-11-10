@@ -114,4 +114,6 @@ arduino_i2c: &i2c3 {
     pinctrl-0 = <&i2c3_default>;
     pinctrl-1 = <&i2c3_sleep>;
     pinctrl-names = "default", "sleep";
+    zephyr,concat-buf-size = < 1024 >;
+    zephyr,flash-buf-max-size = <1024 >;
 };

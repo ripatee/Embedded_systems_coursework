@@ -6,7 +6,7 @@
 #include <lvgl.h>
 #include <zephyr/drivers/display.h>
 
-#define SLEEP_TIME_MS	5000
+#define SLEEP_TIME_MS	50
 
 LOG_MODULE_REGISTER(MAIN, LOG_LEVEL_DBG);
 
@@ -20,6 +20,7 @@ int main(void)
     lv_obj_t *top_text_label;
     lv_obj_t *bottom_text_label;
     lv_obj_t *counter_label;
+    static lv_style_t style1;
 
     char count_str[11] = {0};
     uint32_t count = 0;
@@ -37,10 +38,23 @@ int main(void)
     bottom_text_label = lv_label_create(lv_scr_act());
     counter_label = lv_label_create(lv_scr_act());
 
+    lv_style_init(&style1);
+    lv_style_set_bg_color(&style1, lv_color_black());
+    lv_style_set_bg_opa(&style1, LV_OPA_100);
+    lv_style_set_text_color(&style1, lv_color_white());
+
+    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_white(), 0);
+
     lv_label_set_text(hello_world_label, "Hello world!");
     lv_label_set_text(top_text_label, "Top text");
     lv_label_set_text(bottom_text_label, "Bottom text");
     lv_label_set_text(counter_label, "");
+
+    lv_obj_add_style(hello_world_label, &style1, 0);
+    lv_obj_add_style(top_text_label, &style1, 0);
+    lv_obj_add_style(bottom_text_label, &style1, 0);
+    lv_obj_add_style(counter_label, &style1, 0);
+
 
     lv_obj_align(hello_world_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_align(top_text_label, LV_ALIGN_TOP_MID, 0, 0);
@@ -54,7 +68,7 @@ int main(void)
     while(true)
     {
         sprintf(count_str, "%d", count);
-        lv_label_set_text(counter_label, count_str);
+        // lv_label_set_text(counter_label, count_str);
         lv_task_handler();
         count++;
 
