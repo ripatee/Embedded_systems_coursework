@@ -15,58 +15,61 @@
 #include "mqtt_connection.h"
 #include "sms_wrapper.h"
 
-#define SLEEP_TIME_MS	10000
+#define TEST_SMS                    0
+
+#define SENSOR_THREAD_PRIORITY      7
+#define COMM_THREAD_PRIORITY        8
+#define DISPLAY_THREAD_PRIORITY     9
+
+#define SENSOR_THREAD_STACKSIZE     (1024 * 2)
+#define COMM_THREAD_STACKSIZE       (1024 * 2)
+#define DISPLAY_THREAD_STACKSIZE    (4096 * 2)
+
+#define SENSOR_THREAD_SLEEP_MS      (1000)
+#define COMM_THREAD_SLEEP_MS        (1000*30)
+#define DISPLAY_THREAD_SLEEP_MS     (1000)
+
+
+// Thread declarations
+int sensor_thread(void);
+int comm_thread(void);
+int display_thread(void);
+
+K_THREAD_DEFINE(sensor_thread_id, SENSOR_THREAD_STACKSIZE, sensor_thread,
+                NULL, NULL, NULL, SENSOR_THREAD_PRIORITY, 0, 0);
+K_THREAD_DEFINE(comm_thread_id, COMM_THREAD_STACKSIZE, comm_thread,
+                NULL, NULL, NULL, COMM_THREAD_PRIORITY, 0, 10000);
+K_THREAD_DEFINE(display_thread_id, DISPLAY_THREAD_STACKSIZE, display_thread,
+                NULL, NULL, NULL, DISPLAY_THREAD_PRIORITY, 0, 0);
 
 LOG_MODULE_REGISTER(MAIN, LOG_LEVEL_DBG);
 
 static struct mqtt_client mqtt_client;
 static struct pollfd fds;
 
-int main(void)
+double temp, humidity;
+
+int sensor_thread(void)
 {
-    double temp, humidity;
+    LOG_INF("Sensor thread started");
+    sensors_init();
+
+    while(true)
+    {
+        temp = get_temperature();
+        humidity = get_humidity();
+
+        k_msleep(SENSOR_THREAD_SLEEP_MS);
+    }
+}
+
+int comm_thread(void)
+{
+    LOG_INF("Communications thread started");
+
     int err;
     uint32_t connect_attempt = 0;
-    char mqtt_msg[256];
-    int alert_sent = 0;
-
-    const struct device *display_dev;
-    lv_obj_t *hello_world_label;
-    lv_obj_t *counter_label;
-    
-    char count_str[11] = {0};
-    uint32_t count = 0;
-
-    LOG_INF("Application starting");
-
-    /* Initialising everything */
-    sensors_init();
-    buttons_init();
-
-    display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
-    if (!device_is_ready(display_dev))
-    {
-        LOG_ERR("Display not ready");
-    }
-
-    // Set screen colors, as by default they were inverted and the included version 
-    // of SSD1306 driver doesn't have inversion-on property yet
-    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_black(), LV_PART_MAIN);
-    lv_obj_set_style_bg_opa(lv_scr_act(), 255, LV_PART_MAIN);
-    lv_obj_set_style_text_color(lv_scr_act(), lv_color_white(), LV_PART_MAIN);
-
-    hello_world_label = lv_label_create(lv_scr_act());
-    counter_label = lv_label_create(lv_scr_act());
-
-
-    lv_label_set_text(hello_world_label, "Hello world!");
-    lv_label_set_text(counter_label, "");
-
-    lv_obj_align(hello_world_label, LV_ALIGN_CENTER, 0, 0);
-    lv_obj_align(counter_label, LV_ALIGN_CENTER, 0, 16);
-
-    lv_task_handler();
-    display_blanking_off(display_dev);
+    char mqtt_msg[31];
 
     if (lte_modem_configure())
     {
@@ -105,19 +108,12 @@ do_connect:
         return 0;
     }
 
-    /* Main loop*/
+#if TEST_SMS // Used to test SMS sending
+    sms_send_temp_alert(temp);
+#endif
+
     while(true)
     {
-        temp = get_temperature();
-        humidity = get_humidity();
-
-#if 0 // Used to test SMS sending
-        if (alert_sent == 0)
-        {
-            alert_sent = 1;
-            sms_send_temp_alert(temp);
-        }
-#endif
 
         // Format MQTT message and show it
         snprintfcb(mqtt_msg, sizeof(mqtt_msg), 
@@ -164,12 +160,7 @@ do_connect:
             LOG_ERR("Failed to send MQTT message");
         }
 
-        sprintf(count_str, "%d", count);
-        lv_label_set_text(counter_label, count_str);
-        lv_task_handler();
-        count++;
-
-        k_msleep(SLEEP_TIME_MS);
+        k_msleep(COMM_THREAD_SLEEP_MS);
 
     }
 
@@ -180,6 +171,56 @@ do_connect:
         LOG_ERR("Could not disconnect MQTT client: %d", err);
     }
     goto do_connect;
+}
 
+int display_thread(void)
+{
+    LOG_INF("Display thread started");
+
+    const struct device *display_dev;
+    lv_obj_t *hello_world_label;
+    lv_obj_t *measurement_label;
+
+    char count_str[11] = {0};
+
+    display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
+    if (!device_is_ready(display_dev))
+    {
+        LOG_ERR("Display not ready");
+    }
+
+    // Set screen colors, as by default they were inverted and the included version 
+    // of SSD1306 driver doesn't have inversion-on property yet
+    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_black(), LV_PART_MAIN);
+    lv_obj_set_style_bg_opa(lv_scr_act(), 255, LV_PART_MAIN);
+    lv_obj_set_style_text_color(lv_scr_act(), lv_color_white(), LV_PART_MAIN);
+
+    hello_world_label = lv_label_create(lv_scr_act());
+    measurement_label = lv_label_create(lv_scr_act());
+
+    lv_label_set_text(hello_world_label, "IoT sulari");
+    lv_label_set_text(measurement_label, "");
+
+    lv_obj_align(hello_world_label, LV_ALIGN_TOP_MID, 0, 0);
+    lv_obj_align(measurement_label, LV_ALIGN_CENTER, 0, 0);
+
+    lv_task_handler();
+    display_blanking_off(display_dev);
+
+    while(true)
+    {
+        sprintf(count_str, "%.02f°C   %.02f%%", temp, humidity);
+        lv_label_set_text(measurement_label, count_str);
+
+        lv_task_handler();
+
+        k_msleep(DISPLAY_THREAD_SLEEP_MS);
+    }
+}
+
+int main(void)
+{
+    /* Initialize IRS things */
+    buttons_init();
     return 0;
 }
