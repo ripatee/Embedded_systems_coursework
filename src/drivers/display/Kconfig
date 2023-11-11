@@ -1,3 +1,0 @@
-comment "Display drivers"
-
-rsource "waveshare_epd_2in9_v2/Kconfig"

@@ -1,7 +1,6 @@
 source "Kconfig.zephyr"
 
 menu "IoT-Sulari"
-rsource "drivers/Kconfig"
 
 config MQTT_PUB_TOPIC
     string "MQTT publish topic"

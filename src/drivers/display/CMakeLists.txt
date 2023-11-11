@@ -1,1 +1,0 @@
-add_subdirectory_ifdef(CONFIG_WAVESHARE_EPD_2IN9_V2     waveshare_epd_2in9_v2)

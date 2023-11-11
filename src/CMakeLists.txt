@@ -7,6 +7,4 @@ project(IoT_Sulari)
 
 zephyr_include_directories(include)
 
-add_subdirectory(drivers)
-
 target_sources(app PRIVATE src/main.c)
