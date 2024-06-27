@@ -60,9 +60,14 @@
     };
 };
 
+&gpiote {
+    status= "okay";
+};
+
 &gpio0 {
     status = "okay";
 };
+
 
 &uart0 {
     status = "okay";
@@ -117,14 +122,25 @@
     cs-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
     epaper: ssd16xxfb@0{
-        compatible ="solomon,ssd1680";
+        compatible ="solomon,ssd1681";
         spi-max-frequency = < 4000000 >;
         status = "okay";
         reg = <0>;
-        width = <296>;
-        height = <128>;
+        width = <200>;
+        height = <200>;
         reset-gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         busy-gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         dc-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+/*
+        tssv = <0x80>;
+
+        full {
+            border-waveform = <0x05>;
+        };
+
+        partial {
+            border-waveform = <0x3c>;
+        };
+         */
     };
 };

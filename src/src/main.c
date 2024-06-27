@@ -6,7 +6,7 @@
 #include <lvgl.h>
 #include <zephyr/drivers/display.h>
 
-#define SLEEP_TIME_MS	10000
+#define SLEEP_TIME_MS	1000
 
 LOG_MODULE_REGISTER(MAIN, LOG_LEVEL_DBG);
 
