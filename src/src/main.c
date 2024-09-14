@@ -15,19 +15,19 @@
 #include "mqtt_connection.h"
 #include "sms_wrapper.h"
 
-#define TEST_SMS                    0
+#define TEMP_LIMIT                  30.0
 
 #define SENSOR_THREAD_PRIORITY      7
-#define COMM_THREAD_PRIORITY        8
-#define DISPLAY_THREAD_PRIORITY     9
+#define COMM_THREAD_PRIORITY        9
+#define DISPLAY_THREAD_PRIORITY     8
 
 #define SENSOR_THREAD_STACKSIZE     (1024 * 2)
 #define COMM_THREAD_STACKSIZE       (1024 * 2)
-#define DISPLAY_THREAD_STACKSIZE    (4096 * 2)
+#define DISPLAY_THREAD_STACKSIZE    (1024 * 4)
 
-#define SENSOR_THREAD_SLEEP_MS      (1000)
+#define SENSOR_THREAD_SLEEP_MS      (1000*5)
 #define COMM_THREAD_SLEEP_MS        (1000*30)
-#define DISPLAY_THREAD_SLEEP_MS     (1000)
+#define DISPLAY_THREAD_SLEEP_MS     (1000*5)
 
 
 // Thread declarations
@@ -58,6 +58,12 @@ int sensor_thread(void)
     {
         temp = get_temperature();
         humidity = get_humidity();
+
+        if (temp > TEMP_LIMIT) 
+        {
+            sms_send_temp_alert(temp);
+            k_msleep(SENSOR_THREAD_SLEEP_MS*20);
+        }
 
         k_msleep(SENSOR_THREAD_SLEEP_MS);
     }
@@ -107,10 +113,6 @@ do_connect:
         LOG_ERR("Error in fds_init.");
         return 0;
     }
-
-#if TEST_SMS // Used to test SMS sending
-    sms_send_temp_alert(temp);
-#endif
 
     while(true)
     {
@@ -181,19 +183,13 @@ int display_thread(void)
     lv_obj_t *hello_world_label;
     lv_obj_t *measurement_label;
 
-    char count_str[11] = {0};
+    char count_str[19] = {0};
 
     display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
     if (!device_is_ready(display_dev))
     {
         LOG_ERR("Display not ready");
     }
-
-    // Set screen colors, as by default they were inverted and the included version 
-    // of SSD1306 driver doesn't have inversion-on property yet
-    lv_obj_set_style_bg_color(lv_scr_act(), lv_color_black(), LV_PART_MAIN);
-    lv_obj_set_style_bg_opa(lv_scr_act(), 255, LV_PART_MAIN);
-    lv_obj_set_style_text_color(lv_scr_act(), lv_color_white(), LV_PART_MAIN);
 
     hello_world_label = lv_label_create(lv_scr_act());
     measurement_label = lv_label_create(lv_scr_act());
@@ -209,6 +205,7 @@ int display_thread(void)
 
     while(true)
     {
+
         sprintf(count_str, "%.02f°C   %.02f%%", temp, humidity);
         lv_label_set_text(measurement_label, count_str);
 

@@ -48,7 +48,7 @@ static void sms_callback(struct sms_data *const data, void *context)
         }
         break;
     case SMS_TYPE_STATUS_REPORT:
-        LOG_INF("SMS status repor received");
+        LOG_INF("SMS status report received");
         break;
     default:
         LOG_INF("SMS protocol message with unkown type received"); 
